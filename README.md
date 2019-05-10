@@ -20,3 +20,19 @@ The services that can be installed from this repository are:
 # Documentation
 
 You can find the documentation for running this playbook at https://docs.confluent.io/current/tutorials/cp-ansible/docs/index.html.
+
+gcloud compute instances create kafka-ansible-1 --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=100GB --private-network-ip=10.60.8.200 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --no-address --image-project=ubuntu-os-cloud
+
+gcloud compute instances create kafka-ansible-2 --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=100GB --private-network-ip=10.60.8.201 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --no-address --image-project=ubuntu-os-cloud
+
+gcloud compute instances create kafka-ansible-3 --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=100GB --private-network-ip=10.60.8.202 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --no-address --image-project=ubuntu-os-cloud
+
+gcloud compute instances create kafka-ansible-3 --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=100GB --private-network-ip=10.60.8.202 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --no-address --image-project=ubuntu-os-cloud
+
+gcloud compute instances create schema-registry-ansible --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=10GB --private-network-ip=10.60.8.203 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --image-project=ubuntu-os-cloud
+
+gcloud compute instances create host-control-ansible --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=10GB --private-network-ip=10.60.8.204 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --image-project=ubuntu-os-cloud
+
+gcloud compute instances create connect-ansible --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=10GB --private-network-ip=10.60.8.205 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --image-project=ubuntu-os-cloud
+
+gcloud compute instances create ksql-ansible --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=10GB --private-network-ip=10.60.8.206 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --image-project=ubuntu-os-cloud
