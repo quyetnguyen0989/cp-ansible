@@ -36,3 +36,10 @@ gcloud compute instances create host-control-ansible --image=ubuntu-1804-bionic-
 gcloud compute instances create connect-ansible --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=10GB --private-network-ip=10.60.8.205 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --image-project=ubuntu-os-cloud
 
 gcloud compute instances create ksql-ansible --image=ubuntu-1804-bionic-v20181029 --boot-disk-size=10GB --private-network-ip=10.60.8.206 --zone=asia-southeast1-a --tags=data,ssh --network=v-network-staging-network --subnet=v-network-data-staging-subnetwork --image-project=ubuntu-os-cloud
+
+
+deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+sudo apt-get update
+sudo apt-get install ansible
