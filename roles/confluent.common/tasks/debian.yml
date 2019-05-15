@@ -1,12 +1,12 @@
 - name: Add Confluent apt key
   apt_key:
     url: "{{confluent.repository.debian.key_url}}"
-    state: present
+    state: absent
     become: true
 - name: Add Confluent apt repo
   apt_repository:
     repo: "{{confluent.repository.debian.repository}}"
-    state: present
+    state: absent
     become: true
 - name: Install the Confluent Platform
   apt:
