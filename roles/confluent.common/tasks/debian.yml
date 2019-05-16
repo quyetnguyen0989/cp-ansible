@@ -1,15 +1,12 @@
 - name: Add Confluent apt key
   apt_key:
-    url: "https://packages.confluent.io/deb/3.3/archive.key"
+    url: "{{confluent.repository.debian.key_url}}"
     state: present
-    become: yes
 - name: Add Confluent apt repo
   apt_repository:
-    repo: "deb [arch=amd64] https://packages.confluent.io/deb/3.3"
+    repo: "{{confluent.repository.debian.repository}}"
     state: present
-    become: yes
 - name: Install the Confluent Platform
   apt:
-    name: "confluent-platform-oss-2.11"
+    name: "{{confluent.package_name}}"
     update_cache: yes
-    become: yes
